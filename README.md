@@ -1,2 +1,2 @@
 # ubusiness
-ubusiness app for client and team
+u-business app helps you manage your project and analyze statistics.
