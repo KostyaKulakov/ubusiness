@@ -89,6 +89,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="aspectLogoConstraint" destination="D5n-IL-rcb" id="BOK-yg-sd3"/>
+                        <outlet property="bottomConstraint" destination="rZk-U6-a9w" id="4cr-Or-K6z"/>
+                        <outlet property="scrollView" destination="cKv-cf-fkf" id="trZ-Kz-fRe"/>
+                        <outlet property="topLogoConstraint" destination="r3y-4a-Rwn" id="R1U-fE-qlS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
