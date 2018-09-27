@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var topLogoConstraint: NSLayoutConstraint!
     @IBOutlet weak var aspectLogoConstraint: NSLayoutConstraint!
+    @IBOutlet weak var inputPhoneNumber: UITextField!
     
     static var  defaultBottomConstraintValue,
                 defaultTopLogoConstraintValue: CGFloat?
@@ -76,6 +77,47 @@ class ViewController: UIViewController {
         flexContentFromBoard(notification: notification, showKeyBoard: false)
     }
     
+    private func formattedNumber(number: String) -> String {
+        let cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        var mask = "+X (XXX) XXX XX-XX"
+        
+        var result = ""
+        var index = cleanPhoneNumber.startIndex
+        for ch in mask.characters {
+            if index == cleanPhoneNumber.endIndex {
+                break
+            }
+            if ch == "X" {
+                result.append(cleanPhoneNumber[index])
+                index = cleanPhoneNumber.index(after: index)
+            } else {
+                result.append(ch)
+            }
+        }
+        return result
+    }
+    
+    func replace(myString: String, _ index: Int, _ newChar: Character) -> String {
+        var chars = Array(myString.characters)     // gets an array of characters
+        chars[index] = newChar
+        let modifiedString = String(chars)
+        return modifiedString
+    }
+    
+    @IBAction func chanageInputPhoneNumber(_ sender: Any) {
+        if var phoneNumber = self.inputPhoneNumber.text {
+            
+            phoneNumber = formattedNumber(number: phoneNumber)
+            
+            // App for Russian SIM only
+            if phoneNumber.range(of: "+7") == nil && phoneNumber.count > 1 {
+                phoneNumber = replace(myString: phoneNumber, 1, "7")
+            }
+            
+            self.inputPhoneNumber.text = phoneNumber
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -86,6 +128,8 @@ class ViewController: UIViewController {
         
         // Hide keyboard if click from empty space
         self.hideKeyboardWhenTappedAround()
+        
+        self.inputPhoneNumber.keyboardType = UIKeyboardType.decimalPad
     }
     
     override func viewWillDisappear(_ animated: Bool) {

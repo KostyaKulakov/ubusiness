@@ -31,11 +31,14 @@
                                                     <constraint firstAttribute="width" secondItem="uPk-ri-zZu" secondAttribute="height" multiplier="15:8" id="D5n-IL-rcb"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7b-Vy-kBU">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите номер телефона" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7b-Vy-kBU">
                                                 <rect key="frame" x="30" y="508" width="315" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="chanageInputPhoneNumber:" destination="BYZ-38-t0r" eventType="editingChanged" id="b2n-Us-h0Z"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ls2-EC-lik">
                                                 <rect key="frame" x="30" y="546" width="315" height="33"/>
@@ -92,6 +95,7 @@
                     <connections>
                         <outlet property="aspectLogoConstraint" destination="D5n-IL-rcb" id="BOK-yg-sd3"/>
                         <outlet property="bottomConstraint" destination="rZk-U6-a9w" id="4cr-Or-K6z"/>
+                        <outlet property="inputPhoneNumber" destination="y7b-Vy-kBU" id="psi-mb-B6m"/>
                         <outlet property="scrollView" destination="cKv-cf-fkf" id="trZ-Kz-fRe"/>
                         <outlet property="topLogoConstraint" destination="r3y-4a-Rwn" id="R1U-fE-qlS"/>
                     </connections>
