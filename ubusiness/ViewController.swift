@@ -20,70 +20,21 @@ extension UIViewController {
     }
 }
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var topLogoConstraint: NSLayoutConstraint!
-    @IBOutlet weak var aspectLogoConstraint: NSLayoutConstraint!
-    @IBOutlet weak var inputPhoneNumber: UITextField!
-    
-    static var  defaultBottomConstraintValue,
-                defaultTopLogoConstraintValue: CGFloat?
-    
-    // QA: it's normal?
-    //var bottomConstraintValue: CGFloat // for work keyboard handler
-    
-    @objc func flexContentFromBoard(notification:NSNotification, showKeyBoard:Bool) {
-        var userInfo = notification.userInfo!
-        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        
-        // QA: How made normal it?
-        if ViewController.defaultBottomConstraintValue == nil &&
-            ViewController.defaultTopLogoConstraintValue == nil {
-            
-            ViewController.defaultBottomConstraintValue = self.bottomConstraint.constant
-            ViewController.defaultTopLogoConstraintValue = self.topLogoConstraint.constant
-        }
-        
-        if  let bottomConstraintValue = ViewController.defaultBottomConstraintValue,
-            let topLogoConstraintValue = ViewController.defaultTopLogoConstraintValue {
-            let keyboardHeight: CGFloat = keyboardFrame.size.height
-            
-            // QA: Why it call warring?
-            //let _currentHeight = currentBottomContraintValue + keyboardHeight
-            
-            self.bottomConstraint.constant = bottomConstraintValue + (showKeyBoard ? keyboardHeight : 0)
-            
-            if(showKeyBoard) {
-                self.topLogoConstraint.constant = topLogoConstraintValue / 2
-                
-            } else {
-                self.topLogoConstraint.constant = topLogoConstraintValue
-            }
-            
-            // Why 3 call function, when keyboard show
-            print("Event: \(showKeyBoard) \(self.bottomConstraint.constant) \(keyboardHeight) TLC \(topLogoConstraintValue)")
-        }
-
+extension String {
+    mutating func replaceByIndex(_ index: Int, _ newChar: Character) {
+        var chars = Array(self)
+        chars[index] = newChar
+        let modifiedString = String(chars)
+        self = modifiedString
     }
     
-    @objc func keyboardWillShow(notification:NSNotification) {
-        flexContentFromBoard(notification: notification, showKeyBoard: true)
-    }
+    mutating func formattedPhoneNumber(mask: String) {
+        let cleanPhoneNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
     
-    @objc func keyboardWillHide(notification:NSNotification) {
-        flexContentFromBoard(notification: notification, showKeyBoard: false)
-    }
-    
-    private func formattedNumber(number: String) -> String {
-        let cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        var mask = "+X (XXX) XXX XX-XX"
-        
         var result = ""
         var index = cleanPhoneNumber.startIndex
-        for ch in mask.characters {
+        
+        for ch in mask {
             if index == cleanPhoneNumber.endIndex {
                 break
             }
@@ -94,24 +45,52 @@ class ViewController: UIViewController {
                 result.append(ch)
             }
         }
-        return result
+        
+        self = result
     }
+}
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topLogoConstraint: NSLayoutConstraint!
+    @IBOutlet weak var aspectLogoConstraint: NSLayoutConstraint!
+    @IBOutlet weak var inputPhoneNumber: UITextField!
     
-    func replace(myString: String, _ index: Int, _ newChar: Character) -> String {
-        var chars = Array(myString.characters)     // gets an array of characters
-        chars[index] = newChar
-        let modifiedString = String(chars)
-        return modifiedString
+    // QA: it's normal?
+    //var bottomConstraintValue: CGFloat // for work keyboard handler
+    
+    @objc func keyboardHandler(notification:NSNotification) {
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        let keyboardHeight: CGFloat = keyboardFrame.size.height
+        
+        
+        if  let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+            let kFrame = self.view?.convert(frame, to: nil),
+            let kBounds = self.view?.bounds
+             {
+                let isShow = kBounds.intersects(kFrame)
+                
+                self.bottomConstraint.constant += isShow ? keyboardHeight : -keyboardHeight
+                self.topLogoConstraint.constant *= isShow ? 1/2 : 2
+        }
+        
+        print("Event: \(self.bottomConstraint.constant) \(keyboardHeight)")
+
     }
     
     @IBAction func chanageInputPhoneNumber(_ sender: Any) {
         if var phoneNumber = self.inputPhoneNumber.text {
             
-            phoneNumber = formattedNumber(number: phoneNumber)
+            phoneNumber.formattedPhoneNumber(mask: "+X (XXX) XXX XX-XX")
             
             // App for Russian SIM only
             if phoneNumber.range(of: "+7") == nil && phoneNumber.count > 1 {
-                phoneNumber = replace(myString: phoneNumber, 1, "7")
+                phoneNumber.replaceByIndex(1, "7")
             }
             
             self.inputPhoneNumber.text = phoneNumber
@@ -123,8 +102,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Add listner handler for keyboard event
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardHandler), name:NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         
         // Hide keyboard if click from empty space
         self.hideKeyboardWhenTappedAround()
@@ -141,7 +119,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
