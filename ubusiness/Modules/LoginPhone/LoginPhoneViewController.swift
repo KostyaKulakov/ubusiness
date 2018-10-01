@@ -8,55 +8,17 @@
 
 import UIKit
 
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
-
-extension String {
-    mutating func replaceByIndex(_ index: Int, _ newChar: Character) {
-        var chars = Array(self)
-        chars[index] = newChar
-        let modifiedString = String(chars)
-        self = modifiedString
-    }
-    
-    mutating func formattedPhoneNumber(mask: String) {
-        let cleanPhoneNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-    
-        var result = ""
-        var index = cleanPhoneNumber.startIndex
-        
-        for ch in mask {
-            if index == cleanPhoneNumber.endIndex {
-                break
-            }
-            if ch == "X" {
-                result.append(cleanPhoneNumber[index])
-                index = cleanPhoneNumber.index(after: index)
-            } else {
-                result.append(ch)
-            }
-        }
-        
-        self = result
-    }
-}
-
-class ViewController: UIViewController {
+class LoginPhoneViewController: UIViewController, LoginPhoneViewProtocol {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var topLogoConstraint: NSLayoutConstraint!
     @IBOutlet weak var aspectLogoConstraint: NSLayoutConstraint!
     @IBOutlet weak var inputPhoneNumber: UITextField!
+    
+    // VIPER
+    var presenter: LoginPhonePresenterProtocol!
+    var configurator: LoginPhoneConfiguratorProtocol = LoginPhoneConfigurator()
     
     // QA: it's normal?
     //var bottomConstraintValue: CGFloat // for work keyboard handler
@@ -79,7 +41,7 @@ class ViewController: UIViewController {
                 self.topLogoConstraint.constant *= isShow ? 1/2 : 2
         }
         
-        print("Event: \(self.bottomConstraint.constant) \(keyboardHeight)")
+        //print("Event: \(self.bottomConstraint.constant) \(keyboardHeight)")
 
     }
     
@@ -100,6 +62,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        configurator.configure(with: self)
+        presenter.configureView()
         
         // Add listner handler for keyboard event
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardHandler), name:NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)

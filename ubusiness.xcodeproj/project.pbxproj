@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D27727F21610AE1007AB537 /* LoginPhoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27727E21610AE1007AB537 /* LoginPhoneInteractor.swift */; };
+		5D27728121610AFA007AB537 /* LoginPhoneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27728021610AFA007AB537 /* LoginPhoneConfigurator.swift */; };
+		5D27728321610B11007AB537 /* LoginPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27728221610B11007AB537 /* LoginPhonePresenter.swift */; };
+		5D27728521610B25007AB537 /* LoginPhoneProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27728421610B25007AB537 /* LoginPhoneProtocols.swift */; };
+		5D27728721610B5F007AB537 /* LoginPhoneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27728621610B5F007AB537 /* LoginPhoneRouter.swift */; };
 		5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */; };
-		5DFC7AC7215CCDFF00F0F367 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC6215CCDFF00F0F367 /* ViewController.swift */; };
+		5DFC7AC7215CCDFF00F0F367 /* LoginPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC6215CCDFF00F0F367 /* LoginPhoneViewController.swift */; };
 		5DFC7ACA215CCDFF00F0F367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC8215CCDFF00F0F367 /* Main.storyboard */; };
 		5DFC7ACC215CCDFF00F0F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */; };
 		5DFC7ACF215CCDFF00F0F367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7ACD215CCDFF00F0F367 /* LaunchScreen.storyboard */; };
@@ -34,9 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D27727E21610AE1007AB537 /* LoginPhoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneInteractor.swift; sourceTree = "<group>"; };
+		5D27728021610AFA007AB537 /* LoginPhoneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneConfigurator.swift; sourceTree = "<group>"; };
+		5D27728221610B11007AB537 /* LoginPhonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhonePresenter.swift; sourceTree = "<group>"; };
+		5D27728421610B25007AB537 /* LoginPhoneProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneProtocols.swift; sourceTree = "<group>"; };
+		5D27728621610B5F007AB537 /* LoginPhoneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneRouter.swift; sourceTree = "<group>"; };
 		5DFC7AC1215CCDFF00F0F367 /* ubusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5DFC7AC6215CCDFF00F0F367 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DFC7AC6215CCDFF00F0F367 /* LoginPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneViewController.swift; sourceTree = "<group>"; };
 		5DFC7AC9215CCDFF00F0F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DFC7ACE215CCDFF00F0F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +84,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D27727C216109F4007AB537 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5D27727D21610A24007AB537 /* LoginPhone */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5D27727D21610A24007AB537 /* LoginPhone */ = {
+			isa = PBXGroup;
+			children = (
+				5DFC7AC6215CCDFF00F0F367 /* LoginPhoneViewController.swift */,
+				5D27727E21610AE1007AB537 /* LoginPhoneInteractor.swift */,
+				5D27728021610AFA007AB537 /* LoginPhoneConfigurator.swift */,
+				5D27728221610B11007AB537 /* LoginPhonePresenter.swift */,
+				5D27728421610B25007AB537 /* LoginPhoneProtocols.swift */,
+				5D27728621610B5F007AB537 /* LoginPhoneRouter.swift */,
+			);
+			path = LoginPhone;
+			sourceTree = "<group>";
+		};
 		5DFC7AB8215CCDFF00F0F367 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +128,8 @@
 		5DFC7AC3215CCDFF00F0F367 /* ubusiness */ = {
 			isa = PBXGroup;
 			children = (
+				5D27727C216109F4007AB537 /* Modules */,
 				5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */,
-				5DFC7AC6215CCDFF00F0F367 /* ViewController.swift */,
 				5DFC7AC8215CCDFF00F0F367 /* Main.storyboard */,
 				5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */,
 				5DFC7ACD215CCDFF00F0F367 /* LaunchScreen.storyboard */,
@@ -259,8 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DFC7AC7215CCDFF00F0F367 /* ViewController.swift in Sources */,
+				5D27728321610B11007AB537 /* LoginPhonePresenter.swift in Sources */,
+				5DFC7AC7215CCDFF00F0F367 /* LoginPhoneViewController.swift in Sources */,
+				5D27728521610B25007AB537 /* LoginPhoneProtocols.swift in Sources */,
+				5D27728121610AFA007AB537 /* LoginPhoneConfigurator.swift in Sources */,
+				5D27728721610B5F007AB537 /* LoginPhoneRouter.swift in Sources */,
 				5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */,
+				5D27727F21610AE1007AB537 /* LoginPhoneInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
