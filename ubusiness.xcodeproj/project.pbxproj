@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D27727F21610AE1007AB537 /* LoginPhoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27727E21610AE1007AB537 /* LoginPhoneInteractor.swift */; };
-		5D27728121610AFA007AB537 /* LoginPhoneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27728021610AFA007AB537 /* LoginPhoneConfigurator.swift */; };
-		5D27728321610B11007AB537 /* LoginPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27728221610B11007AB537 /* LoginPhonePresenter.swift */; };
-		5D27728521610B25007AB537 /* LoginPhoneProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27728421610B25007AB537 /* LoginPhoneProtocols.swift */; };
-		5D27728721610B5F007AB537 /* LoginPhoneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27728621610B5F007AB537 /* LoginPhoneRouter.swift */; };
+		5D27908121BB12F0005C90C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27908021BB12F0005C90C0 /* LoginViewController.swift */; };
+		5D27908B21BB29F1005C90C0 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D27908921BB29F1005C90C0 /* TabBar.storyboard */; };
 		5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */; };
-		5DFC7AC7215CCDFF00F0F367 /* LoginPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC6215CCDFF00F0F367 /* LoginPhoneViewController.swift */; };
 		5DFC7ACA215CCDFF00F0F367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC8215CCDFF00F0F367 /* Main.storyboard */; };
 		5DFC7ACC215CCDFF00F0F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */; };
 		5DFC7ACF215CCDFF00F0F367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7ACD215CCDFF00F0F367 /* LaunchScreen.storyboard */; };
@@ -39,14 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D27727E21610AE1007AB537 /* LoginPhoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneInteractor.swift; sourceTree = "<group>"; };
-		5D27728021610AFA007AB537 /* LoginPhoneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneConfigurator.swift; sourceTree = "<group>"; };
-		5D27728221610B11007AB537 /* LoginPhonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhonePresenter.swift; sourceTree = "<group>"; };
-		5D27728421610B25007AB537 /* LoginPhoneProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneProtocols.swift; sourceTree = "<group>"; };
-		5D27728621610B5F007AB537 /* LoginPhoneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneRouter.swift; sourceTree = "<group>"; };
+		5D27908021BB12F0005C90C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5D27908A21BB29F1005C90C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ubusiness/Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		5DFC7AC1215CCDFF00F0F367 /* ubusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5DFC7AC6215CCDFF00F0F367 /* LoginPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneViewController.swift; sourceTree = "<group>"; };
 		5DFC7AC9215CCDFF00F0F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DFC7ACE215CCDFF00F0F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,25 +76,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D27727C216109F4007AB537 /* Modules */ = {
+		5D27907C21BB0F63005C90C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5D27727D21610A24007AB537 /* LoginPhone */,
 			);
-			path = Modules;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		5D27727D21610A24007AB537 /* LoginPhone */ = {
+		5D27907D21BB0F6C005C90C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5DFC7AC6215CCDFF00F0F367 /* LoginPhoneViewController.swift */,
-				5D27727E21610AE1007AB537 /* LoginPhoneInteractor.swift */,
-				5D27728021610AFA007AB537 /* LoginPhoneConfigurator.swift */,
-				5D27728221610B11007AB537 /* LoginPhonePresenter.swift */,
-				5D27728421610B25007AB537 /* LoginPhoneProtocols.swift */,
-				5D27728621610B5F007AB537 /* LoginPhoneRouter.swift */,
+				5D27908021BB12F0005C90C0 /* LoginViewController.swift */,
 			);
-			path = LoginPhone;
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D27907E21BB0F78005C90C0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5D27907F21BB0F7E005C90C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5DFC7AB8215CCDFF00F0F367 = {
@@ -128,8 +128,12 @@
 		5DFC7AC3215CCDFF00F0F367 /* ubusiness */ = {
 			isa = PBXGroup;
 			children = (
-				5D27727C216109F4007AB537 /* Modules */,
+				5D27907F21BB0F7E005C90C0 /* ViewModel */,
+				5D27907E21BB0F78005C90C0 /* Protocol */,
+				5D27907D21BB0F6C005C90C0 /* View */,
+				5D27907C21BB0F63005C90C0 /* Model */,
 				5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */,
+				5D27908921BB29F1005C90C0 /* TabBar.storyboard */,
 				5DFC7AC8215CCDFF00F0F367 /* Main.storyboard */,
 				5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */,
 				5DFC7ACD215CCDFF00F0F367 /* LaunchScreen.storyboard */,
@@ -219,20 +223,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Константин Кулаков";
 				TargetAttributes = {
 					5DFC7AC0215CCDFF00F0F367 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					5DFC7AD4215CCDFF00F0F367 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5DFC7AC0215CCDFF00F0F367;
 					};
 					5DFC7ADF215CCDFF00F0F367 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5DFC7AC0215CCDFF00F0F367;
 					};
@@ -263,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D27908B21BB29F1005C90C0 /* TabBar.storyboard in Resources */,
 				5DFC7ACF215CCDFF00F0F367 /* LaunchScreen.storyboard in Resources */,
 				5DFC7ACC215CCDFF00F0F367 /* Assets.xcassets in Resources */,
 				5DFC7ACA215CCDFF00F0F367 /* Main.storyboard in Resources */,
@@ -290,13 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D27728321610B11007AB537 /* LoginPhonePresenter.swift in Sources */,
-				5DFC7AC7215CCDFF00F0F367 /* LoginPhoneViewController.swift in Sources */,
-				5D27728521610B25007AB537 /* LoginPhoneProtocols.swift in Sources */,
-				5D27728121610AFA007AB537 /* LoginPhoneConfigurator.swift in Sources */,
-				5D27728721610B5F007AB537 /* LoginPhoneRouter.swift in Sources */,
+				5D27908121BB12F0005C90C0 /* LoginViewController.swift in Sources */,
 				5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */,
-				5D27727F21610AE1007AB537 /* LoginPhoneInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +335,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5D27908921BB29F1005C90C0 /* TabBar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D27908A21BB29F1005C90C0 /* Base */,
+			);
+			name = TabBar.storyboard;
+			sourceTree = "<group>";
+		};
 		5DFC7AC8215CCDFF00F0F367 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -365,6 +376,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -372,6 +384,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -422,6 +435,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -429,6 +443,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -468,7 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.kostyakulakov.ubusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -483,7 +498,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.kostyakulakov.ubusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -499,7 +514,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.kostyakulakov.ubusinessTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ubusiness.app/ubusiness";
 			};
@@ -516,7 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.kostyakulakov.ubusinessTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ubusiness.app/ubusiness";
 			};
@@ -532,7 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.kostyakulakov.ubusinessUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ubusiness;
 			};
@@ -548,7 +563,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.kostyakulakov.ubusinessUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ubusiness;
 			};
