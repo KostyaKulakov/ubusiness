@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		435830C3496074EA9C8F96EB /* Pods_ubusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 617E68ED2C18BB0985DC138D /* Pods_ubusiness.framework */; };
 		5D27908121BB12F0005C90C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27908021BB12F0005C90C0 /* LoginViewController.swift */; };
 		5D27908B21BB29F1005C90C0 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D27908921BB29F1005C90C0 /* TabBar.storyboard */; };
 		5D27908D21BD919A005C90C0 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27908C21BD919A005C90C0 /* LoginViewViewModel.swift */; };
+		5D27908F21BD9807005C90C0 /* LoginViewPhoneFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27908E21BD9807005C90C0 /* LoginViewPhoneFieldViewModel.swift */; };
+		5D27909121BD9D65005C90C0 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27909021BD9D65005C90C0 /* PhoneVerificationViewController.swift */; };
+		5D27909321BDA6BC005C90C0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5D27909221BDA6BC005C90C0 /* Podfile */; };
 		5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */; };
 		5DFC7ACA215CCDFF00F0F367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC8215CCDFF00F0F367 /* Main.storyboard */; };
 		5DFC7ACC215CCDFF00F0F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */; };
@@ -39,6 +43,9 @@
 		5D27908021BB12F0005C90C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D27908A21BB29F1005C90C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ubusiness/Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		5D27908C21BD919A005C90C0 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		5D27908E21BD9807005C90C0 /* LoginViewPhoneFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPhoneFieldViewModel.swift; sourceTree = "<group>"; };
+		5D27909021BD9D65005C90C0 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		5D27909221BDA6BC005C90C0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		5DFC7AC1215CCDFF00F0F367 /* ubusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFC7AC9215CCDFF00F0F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +58,9 @@
 		5DFC7AE0215CCDFF00F0F367 /* ubusinessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ubusinessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFC7AE4215CCDFF00F0F367 /* ubusinessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ubusinessUITests.swift; sourceTree = "<group>"; };
 		5DFC7AE6215CCDFF00F0F367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		617E68ED2C18BB0985DC138D /* Pods_ubusiness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ubusiness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		811C05F6EAB5FFE304567B92 /* Pods-ubusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ubusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ubusiness/Pods-ubusiness.debug.xcconfig"; sourceTree = "<group>"; };
+		A53B7579908A276C51DA92F9 /* Pods-ubusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ubusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-ubusiness/Pods-ubusiness.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435830C3496074EA9C8F96EB /* Pods_ubusiness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DCEB89ADB8C8FA396FB3830 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				811C05F6EAB5FFE304567B92 /* Pods-ubusiness.debug.xcconfig */,
+				A53B7579908A276C51DA92F9 /* Pods-ubusiness.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5D27907C21BB0F63005C90C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				5D27908021BB12F0005C90C0 /* LoginViewController.swift */,
+				5D27909021BD9D65005C90C0 /* PhoneVerificationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5D27908C21BD919A005C90C0 /* LoginViewViewModel.swift */,
+				5D27908E21BD9807005C90C0 /* LoginViewPhoneFieldViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -111,10 +133,13 @@
 		5DFC7AB8215CCDFF00F0F367 = {
 			isa = PBXGroup;
 			children = (
+				5D27909221BDA6BC005C90C0 /* Podfile */,
 				5DFC7AC3215CCDFF00F0F367 /* ubusiness */,
 				5DFC7AD8215CCDFF00F0F367 /* ubusinessTests */,
 				5DFC7AE3215CCDFF00F0F367 /* ubusinessUITests */,
 				5DFC7AC2215CCDFF00F0F367 /* Products */,
+				2DCEB89ADB8C8FA396FB3830 /* Pods */,
+				6998F8314DDA723DB8F724A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +188,14 @@
 			path = ubusinessUITests;
 			sourceTree = "<group>";
 		};
+		6998F8314DDA723DB8F724A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				617E68ED2C18BB0985DC138D /* Pods_ubusiness.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DFC7AE9215CCDFF00F0F367 /* Build configuration list for PBXNativeTarget "ubusiness" */;
 			buildPhases = (
+				73873A14431F4D9A450DC750 /* [CP] Check Pods Manifest.lock */,
 				5DFC7ABD215CCDFF00F0F367 /* Sources */,
 				5DFC7ABE215CCDFF00F0F367 /* Frameworks */,
 				5DFC7ABF215CCDFF00F0F367 /* Resources */,
+				94CA3C0CEE83C0B8F7674E0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D27909321BDA6BC005C90C0 /* Podfile in Resources */,
 				5D27908B21BB29F1005C90C0 /* TabBar.storyboard in Resources */,
 				5DFC7ACF215CCDFF00F0F367 /* LaunchScreen.storyboard in Resources */,
 				5DFC7ACC215CCDFF00F0F367 /* Assets.xcassets in Resources */,
@@ -296,14 +332,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		73873A14431F4D9A450DC750 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ubusiness-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94CA3C0CEE83C0B8F7674E0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ubusiness/Pods-ubusiness-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UITextField+Shake/UITextField_Shake.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextField_Shake.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ubusiness/Pods-ubusiness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5DFC7ABD215CCDFF00F0F367 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5D27908121BB12F0005C90C0 /* LoginViewController.swift in Sources */,
+				5D27909121BD9D65005C90C0 /* PhoneVerificationViewController.swift in Sources */,
 				5D27908D21BD919A005C90C0 /* LoginViewViewModel.swift in Sources */,
 				5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */,
+				5D27908F21BD9807005C90C0 /* LoginViewPhoneFieldViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +564,7 @@
 		};
 		5DFC7AEA215CCDFF00F0F367 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 811C05F6EAB5FFE304567B92 /* Pods-ubusiness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +580,7 @@
 		};
 		5DFC7AEB215CCDFF00F0F367 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A53B7579908A276C51DA92F9 /* Pods-ubusiness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

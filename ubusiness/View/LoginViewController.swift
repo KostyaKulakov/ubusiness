@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UITextField_Shake
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
@@ -46,6 +47,32 @@ class LoginViewController: UIViewController {
     
     @objc func keyboardWillHide(notification: Notification) {
         viewModel?.frameResizeWithKeyboard(notification: notification, with: self.view, buttonJoinBottomConstraint: buttonJoinBottomConstraint, logoTopConstraint: logoTopConstraint, isShowEvent: false)
+    }
+    
+    @IBAction func pressLoginButton(_ sender: Any) {
+        guard let viewModel = self.viewModel else { return }
+        
+        if(!viewModel.isCorrectPhoneNumber()) {
+            phoneField.shake(5, withDelta: 5, speed: 0.1)
+            return;
+        }
+        
+        performSegue(withIdentifier: "segueToPhoneVerification", sender: self)
+    }
+    
+    @IBAction func valueChangedPhoneField(_ sender: Any) {
+        if let phoneNumber = phoneField.text, let viewModel = self.viewModel {
+            self.phoneField.text = viewModel.getFormatedPhoneNumber(phoneNumber: phoneNumber)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToPhoneVerification" {
+            let destinationVC = segue.destination as? PhoneVerificationViewController
+            guard let vc = destinationVC else { return }
+            
+            vc.clientPhoneNumber = viewModel?.getServerLikePhoneNumber()
+        }
     }
 }
 

@@ -34,5 +34,22 @@ class LoginViewViewModel {
         }
     }
     
+    func getServerLikePhoneNumber() -> String {
+        return viewModelPhone?.serverLikePhone ?? ""
+    }
+    
+    func isCorrectPhoneNumber() -> Bool {
+        guard let viewModelPhone = self.viewModelPhone else { return false }
+        
+        return viewModelPhone.isCorrectNumber()
+    }
+    
+    func getFormatedPhoneNumber(phoneNumber: String) -> String {
+        viewModelPhone = LoginViewPhoneFieldViewModel(with: phoneNumber)
+        
+        return viewModelPhone?.phoneString ?? ""
+    }
+    
+    private var viewModelPhone: LoginViewPhoneFieldViewModel?
     private var buttonJoinBottomConstraintOld: CGFloat?
 }

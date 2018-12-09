@@ -32,6 +32,11 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="valueChangedPhoneField:" destination="BYZ-38-t0r" eventType="editingChanged" id="Hxz-Je-Jqe"/>
+                                    <action selector="valueChangedPhoneField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="hZj-yJ-awh"/>
+                                    <action selector="valueChangedPhoneField:" destination="BYZ-38-t0r" eventType="valueChanged" id="wsa-ak-Q9h"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ls2-EC-lik">
                                 <rect key="frame" x="30" y="679" width="315" height="34"/>
@@ -41,7 +46,7 @@
                                 </constraints>
                                 <state key="normal" title="Войти"/>
                                 <connections>
-                                    <segue destination="9j1-fG-w8p" kind="show" id="pkF-qq-JQS"/>
+                                    <action selector="pressLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZX-8W-J8I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,22 +69,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fI8-Ny-tHp"/>
+                    <navigationItem key="navigationItem" id="fI8-Ny-tHp">
+                        <barButtonItem key="backBarButtonItem" title="Вернуться" id="MeE-O0-brz"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonJoinBottomConstraint" destination="kpz-Wf-ydm" id="e8Y-HF-Nxx"/>
                         <outlet property="loginButton" destination="ls2-EC-lik" id="xmR-qZ-fUs"/>
                         <outlet property="logoTopConstraint" destination="gNr-Zu-GwD" id="k3s-8m-Skc"/>
                         <outlet property="phoneField" destination="y7b-Vy-kBU" id="Tqg-6K-Nuo"/>
+                        <segue destination="9j1-fG-w8p" kind="show" identifier="segueToPhoneVerification" id="fHM-h3-Rxa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005.6" y="179.55665024630542"/>
         </scene>
-        <!--View Controller-->
+        <!--Phone Verification View Controller-->
         <scene sceneID="tGm-ud-Oql">
             <objects>
-                <viewController id="9j1-fG-w8p" sceneMemberID="viewController">
+                <viewController id="9j1-fG-w8p" customClass="PhoneVerificationViewController" customModule="ubusiness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nDC-qn-amV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

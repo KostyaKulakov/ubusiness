@@ -1,0 +1,16 @@
+PODS:
+  - "UITextField+Shake (1.2.1)"
+
+DEPENDENCIES:
+  - "UITextField+Shake (~> 1.2)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - "UITextField+Shake"
+
+SPEC CHECKSUMS:
+  "UITextField+Shake": 298ac5a0f239d731bdab999b19b628c956ca0ac3
+
+PODFILE CHECKSUM: 2430778c2bba54827b93ed2b78b4846aa069772a
+
+COCOAPODS: 1.5.3
