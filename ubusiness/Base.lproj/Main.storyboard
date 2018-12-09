@@ -66,7 +66,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="fI8-Ny-tHp"/>
                     <connections>
+                        <outlet property="buttonJoinBottomConstraint" destination="kpz-Wf-ydm" id="e8Y-HF-Nxx"/>
                         <outlet property="loginButton" destination="ls2-EC-lik" id="xmR-qZ-fUs"/>
+                        <outlet property="logoTopConstraint" destination="gNr-Zu-GwD" id="k3s-8m-Skc"/>
                         <outlet property="phoneField" destination="y7b-Vy-kBU" id="Tqg-6K-Nuo"/>
                     </connections>
                 </viewController>

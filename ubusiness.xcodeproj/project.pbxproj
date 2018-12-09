@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D27908121BB12F0005C90C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27908021BB12F0005C90C0 /* LoginViewController.swift */; };
 		5D27908B21BB29F1005C90C0 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D27908921BB29F1005C90C0 /* TabBar.storyboard */; };
+		5D27908D21BD919A005C90C0 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27908C21BD919A005C90C0 /* LoginViewViewModel.swift */; };
 		5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */; };
 		5DFC7ACA215CCDFF00F0F367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC8215CCDFF00F0F367 /* Main.storyboard */; };
 		5DFC7ACC215CCDFF00F0F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		5D27908021BB12F0005C90C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D27908A21BB29F1005C90C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ubusiness/Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
+		5D27908C21BD919A005C90C0 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
 		5DFC7AC1215CCDFF00F0F367 /* ubusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFC7AC9215CCDFF00F0F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		5D27907F21BB0F7E005C90C0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5D27908C21BD919A005C90C0 /* LoginViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D27908121BB12F0005C90C0 /* LoginViewController.swift in Sources */,
+				5D27908D21BD919A005C90C0 /* LoginViewViewModel.swift in Sources */,
 				5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
