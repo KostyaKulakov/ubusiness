@@ -95,7 +95,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="b0b-ym-J4q">
                                 <rect key="frame" x="83.666666666666686" y="249.66666666666663" width="208" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-Tw-69p">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-Tw-69p">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -105,8 +105,11 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="changedPhoneVerificationTextFields:" destination="9j1-fG-w8p" eventType="editingChanged" id="dnU-6d-t7l"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuJ-7Z-l6e">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuJ-7Z-l6e">
                                         <rect key="frame" x="55.999999999999986" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -116,8 +119,11 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="changedPhoneVerificationTextFields:" destination="9j1-fG-w8p" eventType="editingChanged" id="9rG-BX-pQ5"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v7W-qK-nWY">
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v7W-qK-nWY">
                                         <rect key="frame" x="112" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -127,8 +133,11 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="changedPhoneVerificationTextFields:" destination="9j1-fG-w8p" eventType="editingChanged" id="Ek2-rF-VDz"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQO-MD-LAa">
+                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQO-MD-LAa">
                                         <rect key="frame" x="168" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -138,6 +147,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="changedPhoneVerificationTextFields:" destination="9j1-fG-w8p" eventType="editingChanged" id="OSt-fD-GKy"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -168,9 +180,6 @@
                                 <rect key="frame" x="90" y="336.66666666666669" width="195" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <state key="normal" title="ОТПРАВИТЬ ЕЩЕ РАЗ"/>
-                                <connections>
-                                    <segue destination="Ikd-Tc-06r" kind="show" id="0Ej-OK-MxU"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,6 +200,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vA1-o3-pim"/>
                     </view>
+                    <connections>
+                        <outletCollection property="phoneVerificationTextFields" destination="6kA-Tw-69p" collectionClass="NSMutableArray" id="edV-6N-Uop"/>
+                        <outletCollection property="phoneVerificationTextFields" destination="kuJ-7Z-l6e" collectionClass="NSMutableArray" id="SAV-2J-vYn"/>
+                        <outletCollection property="phoneVerificationTextFields" destination="v7W-qK-nWY" collectionClass="NSMutableArray" id="izr-oM-oOS"/>
+                        <outletCollection property="phoneVerificationTextFields" destination="VQO-MD-LAa" collectionClass="NSMutableArray" id="6ub-Ga-MEe"/>
+                        <segue destination="Ikd-Tc-06r" kind="show" identifier="segueToControlPanel" id="hnL-Gz-7hc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EK-0Q-u4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
