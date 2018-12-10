@@ -33,7 +33,18 @@ class PhoneVerificationViewController: UIViewController {
     }
     
     func performToControlPanel() {
-        performSegue(withIdentifier: "segueToControlPanel", sender: self)
+        let code =  phoneVerificationTextFields[0].text! +
+                    phoneVerificationTextFields[1].text! +
+                    phoneVerificationTextFields[2].text! +
+                    phoneVerificationTextFields[3].text!;
+        
+        UserSerivce.current.toVeryfiUser(code: code) { (isSuccess: Bool) in
+            if isSuccess {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "segueToControlPanel", sender: self)
+                }
+            }
+        }
     }
     
     @IBAction func changedPhoneVerificationTextFields(_ sender: Any) {

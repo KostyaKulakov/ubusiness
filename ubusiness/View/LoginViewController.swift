@@ -52,13 +52,20 @@ class LoginViewController: UIViewController {
     
     @IBAction func pressLoginButton(_ sender: Any) {
         guard let viewModel = self.viewModel else { return }
-        
+
         if(!viewModel.isCorrectPhoneNumber()) {
             phoneField.shake(5, withDelta: 5, speed: 0.1)
             return;
         }
         
-        performSegue(withIdentifier: "segueToPhoneVerification", sender: self)
+        UserSerivce.current.phoneAuth(by: viewModel.getServerLikePhoneNumber()) { (isSuccess: Bool) in
+            print("UserSerivce.current.phoneAuth: \(isSuccess)")
+            if isSuccess {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "segueToPhoneVerification", sender: self)
+                }
+            }
+        }
     }
     
     @IBAction func valueChangedPhoneField(_ sender: Any) {
@@ -75,6 +82,7 @@ class LoginViewController: UIViewController {
             vc.clientPhoneNumber = viewModel?.getServerLikePhoneNumber()
         }
     }
+    
 }
 
 extension UIViewController {

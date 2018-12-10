@@ -15,6 +15,18 @@
 		5D27909121BD9D65005C90C0 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27909021BD9D65005C90C0 /* PhoneVerificationViewController.swift */; };
 		5D27909321BDA6BC005C90C0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5D27909221BDA6BC005C90C0 /* Podfile */; };
 		5D27909A21BEF826005C90C0 /* PhoneVerificationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27909921BEF826005C90C0 /* PhoneVerificationTextFieldDelegate.swift */; };
+		5D27909C21BF00FE005C90C0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27909B21BF00FE005C90C0 /* UserModel.swift */; };
+		5D27909F21BF018F005C90C0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27909E21BF018F005C90C0 /* UserService.swift */; };
+		5D2790A121BF01EA005C90C0 /* UserSerivceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790A021BF01EA005C90C0 /* UserSerivceProtocol.swift */; };
+		5D2790A321BF06A0005C90C0 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790A221BF06A0005C90C0 /* Server.swift */; };
+		5D2790A521BF06D7005C90C0 /* ServerApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790A421BF06D7005C90C0 /* ServerApiProtocol.swift */; };
+		5D2790A721BF07CA005C90C0 /* ServerAuthByPhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790A621BF07CA005C90C0 /* ServerAuthByPhoneModel.swift */; };
+		5D2790A921BF0879005C90C0 /* ServerAlwaysAnswerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790A821BF0879005C90C0 /* ServerAlwaysAnswerProtocol.swift */; };
+		5D2790AB21BF094C005C90C0 /* ServerAuthByTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790AA21BF094C005C90C0 /* ServerAuthByTokenModel.swift */; };
+		5D2790AE21BF0A08005C90C0 /* ServerSendCodeByTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790AD21BF0A08005C90C0 /* ServerSendCodeByTokenModel.swift */; };
+		5D2790B121BF0A8B005C90C0 /* ServerCheckCodeByTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790B021BF0A8B005C90C0 /* ServerCheckCodeByTokenModel.swift */; };
+		5D2790B321BF0DCF005C90C0 /* ServerGetUserByTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790B221BF0DCF005C90C0 /* ServerGetUserByTokenModel.swift */; };
+		5D2790B521BF1179005C90C0 /* ServerMethodProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2790B421BF1179005C90C0 /* ServerMethodProtocol.swift */; };
 		5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */; };
 		5DFC7ACA215CCDFF00F0F367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7AC8215CCDFF00F0F367 /* Main.storyboard */; };
 		5DFC7ACC215CCDFF00F0F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC7ACB215CCDFF00F0F367 /* Assets.xcassets */; };
@@ -48,6 +60,18 @@
 		5D27909021BD9D65005C90C0 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		5D27909221BDA6BC005C90C0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		5D27909921BEF826005C90C0 /* PhoneVerificationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationTextFieldDelegate.swift; sourceTree = "<group>"; };
+		5D27909B21BF00FE005C90C0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		5D27909E21BF018F005C90C0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		5D2790A021BF01EA005C90C0 /* UserSerivceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSerivceProtocol.swift; sourceTree = "<group>"; };
+		5D2790A221BF06A0005C90C0 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		5D2790A421BF06D7005C90C0 /* ServerApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerApiProtocol.swift; sourceTree = "<group>"; };
+		5D2790A621BF07CA005C90C0 /* ServerAuthByPhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAuthByPhoneModel.swift; sourceTree = "<group>"; };
+		5D2790A821BF0879005C90C0 /* ServerAlwaysAnswerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAlwaysAnswerProtocol.swift; sourceTree = "<group>"; };
+		5D2790AA21BF094C005C90C0 /* ServerAuthByTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAuthByTokenModel.swift; sourceTree = "<group>"; };
+		5D2790AD21BF0A08005C90C0 /* ServerSendCodeByTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSendCodeByTokenModel.swift; sourceTree = "<group>"; };
+		5D2790B021BF0A8B005C90C0 /* ServerCheckCodeByTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCheckCodeByTokenModel.swift; sourceTree = "<group>"; };
+		5D2790B221BF0DCF005C90C0 /* ServerGetUserByTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerGetUserByTokenModel.swift; sourceTree = "<group>"; };
+		5D2790B421BF1179005C90C0 /* ServerMethodProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMethodProtocol.swift; sourceTree = "<group>"; };
 		5DFC7AC1215CCDFF00F0F367 /* ubusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFC7AC4215CCDFF00F0F367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFC7AC9215CCDFF00F0F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +127,8 @@
 		5D27907C21BB0F63005C90C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5D2790AC21BF0992005C90C0 /* Server */,
+				5D27909B21BF00FE005C90C0 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +146,10 @@
 		5D27907E21BB0F78005C90C0 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				5D2790A021BF01EA005C90C0 /* UserSerivceProtocol.swift */,
+				5D2790A421BF06D7005C90C0 /* ServerApiProtocol.swift */,
+				5D2790A821BF0879005C90C0 /* ServerAlwaysAnswerProtocol.swift */,
+				5D2790B421BF1179005C90C0 /* ServerMethodProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -131,6 +161,27 @@
 				5D27908E21BD9807005C90C0 /* LoginViewPhoneFieldViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5D27909D21BF0178005C90C0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5D27909E21BF018F005C90C0 /* UserService.swift */,
+				5D2790A221BF06A0005C90C0 /* Server.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5D2790AC21BF0992005C90C0 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				5D2790A621BF07CA005C90C0 /* ServerAuthByPhoneModel.swift */,
+				5D2790AA21BF094C005C90C0 /* ServerAuthByTokenModel.swift */,
+				5D2790AD21BF0A08005C90C0 /* ServerSendCodeByTokenModel.swift */,
+				5D2790B021BF0A8B005C90C0 /* ServerCheckCodeByTokenModel.swift */,
+				5D2790B221BF0DCF005C90C0 /* ServerGetUserByTokenModel.swift */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 		5DFC7AB8215CCDFF00F0F367 = {
@@ -159,6 +210,7 @@
 		5DFC7AC3215CCDFF00F0F367 /* ubusiness */ = {
 			isa = PBXGroup;
 			children = (
+				5D27909D21BF0178005C90C0 /* Services */,
 				5D27907F21BB0F7E005C90C0 /* ViewModel */,
 				5D27907E21BB0F78005C90C0 /* Protocol */,
 				5D27907D21BB0F6C005C90C0 /* View */,
@@ -387,12 +439,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2790A321BF06A0005C90C0 /* Server.swift in Sources */,
 				5D27909A21BEF826005C90C0 /* PhoneVerificationTextFieldDelegate.swift in Sources */,
+				5D2790A521BF06D7005C90C0 /* ServerApiProtocol.swift in Sources */,
 				5D27908121BB12F0005C90C0 /* LoginViewController.swift in Sources */,
 				5D27909121BD9D65005C90C0 /* PhoneVerificationViewController.swift in Sources */,
 				5D27908D21BD919A005C90C0 /* LoginViewViewModel.swift in Sources */,
+				5D2790AE21BF0A08005C90C0 /* ServerSendCodeByTokenModel.swift in Sources */,
+				5D27909F21BF018F005C90C0 /* UserService.swift in Sources */,
 				5DFC7AC5215CCDFF00F0F367 /* AppDelegate.swift in Sources */,
+				5D2790B521BF1179005C90C0 /* ServerMethodProtocol.swift in Sources */,
+				5D2790A121BF01EA005C90C0 /* UserSerivceProtocol.swift in Sources */,
+				5D2790A921BF0879005C90C0 /* ServerAlwaysAnswerProtocol.swift in Sources */,
+				5D2790B121BF0A8B005C90C0 /* ServerCheckCodeByTokenModel.swift in Sources */,
 				5D27908F21BD9807005C90C0 /* LoginViewPhoneFieldViewModel.swift in Sources */,
+				5D2790A721BF07CA005C90C0 /* ServerAuthByPhoneModel.swift in Sources */,
+				5D27909C21BF00FE005C90C0 /* UserModel.swift in Sources */,
+				5D2790AB21BF094C005C90C0 /* ServerAuthByTokenModel.swift in Sources */,
+				5D2790B321BF0DCF005C90C0 /* ServerGetUserByTokenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
